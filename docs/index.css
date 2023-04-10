@@ -1,0 +1,343 @@
+/* Mobile First CSS */
+
+html {
+  background-color:#2d2e2f;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}
+
+html, body {
+  margin:0;
+  padding:0;
+}
+
+button {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.searchbar {
+  justify-self: end;
+  background-color: #2d2e2f;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #111;
+  width: 20em;
+  margin-right: 10px;
+}
+
+.searchbar:hover {
+  border: 2px solid #1a92e8;
+}
+
+.nav {
+  z-index: 2;
+  display : flex;
+  justify-content: start;
+  align-items : center;
+  background-color: #18191a; 
+  border-bottom: 0.1em solid #a5f1b2;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  height: 3em;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  float: left;
+  border-color: black;
+}
+
+#counter {
+  position: relative;
+  left:-3em;
+  width: 0;
+  margin-right: 0em;
+  color:#f8c555;
+}
+
+/* Right align buttons in navbar */
+.nav-button-group {
+  margin-right: auto;
+}
+
+.site-content {
+  padding-top: 4em;
+  padding-bottom: 1em;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+.nav-item {
+  display: inline-block;
+  padding: 10px;
+  text-align: center;
+}
+
+.nav-link {
+  color: #666;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #fff;
+}
+
+.component {
+
+}
+
+span.ripple {
+  z-index: 100;
+  position: absolute; /* The absolute position we mentioned earlier */
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 400ms linear;
+  background-color: rgba(190, 190, 190, 0.7);
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.button-row-button {
+  overflow: hidden;
+  margin-right: 0.25em;
+  margin-left: 0.25em;
+  padding : 0.2em;
+  position: relative;
+  text-decoration: none;
+  color: #7e95a6;
+  font-family: monospace;
+  border-radius: 5px;
+}
+
+.button-row {
+}
+
+/* The black background on code blocks. */
+.code-container {
+  background-color: #242526;
+  border-radius: 0px 8px 8px 8px;
+  
+  padding: 0.2em 0.4em;
+  margin-bottom: 1em;
+  padding-bottom: 0.8em;
+}
+
+.italic 
+{
+  font-style: italic;
+}
+
+.hidden 
+{
+  display: none;
+}
+
+.invisible 
+{
+  opacity: 0
+}
+
+.button {
+  background-color: #111;
+  border: 1px solid #999;
+}
+
+.button.left {
+  border-radius: 6px 0 0 6px;
+}
+
+.button.right {
+  border-radius: 0 6px 6px 0;
+}
+
+.button.active {
+  background-color: #4d2659;
+}
+
+.title {
+  scroll-margin-top: 80px;
+  color: #7e95a6;
+}
+.title-row {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.anchor {
+  margin-left: 0.2em;
+  font-size: 1.5em;
+  opacity: 0;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.anchor:hover {
+  opacity: 1;
+  display: block;
+  color: #1a92e8;
+}
+
+.compound-block {
+  border-left: 0.1em solid #999;
+}
+
+.indent {
+  padding-left: 1em;
+}
+
+/**
+* prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML.
+* Based on https://github.com/chriskempson/tomorrow-theme
+*
+* @author Rose Pritchard
+*/
+
+.spacer {
+  padding-top: 1em;
+}
+
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  font-size: 0.8em;
+  font-style: italic;
+  color: #999;
+}
+
+.token.punctuation {
+  color: #ccc;
+}
+
+.token.property,
+.token.class-name,
+.token.constant,
+.token.symbol {
+  color: #f8c555;
+}
+
+.token.filter {
+  color: #b05435;
+}
+
+.token.type
+{
+  color: white;
+}
+.token.selector,
+.token.important,
+.token.atrule,
+.token.keyword,
+.token.builtin,
+.token.boolean,
+.token.float,
+.token.number,
+.token.integer {
+  color: #cc99cd;
+}
+
+.token.boolean {
+  color: #387bc7
+}
+
+.token.unknown,
+.token.array,
+.token.object {
+  color: #e05b43
+}
+
+.token.string,
+.token.exact-string,
+.token.char,
+.token.attr-value,
+.token.regex,
+.token.variable {
+  color: #7ec699;
+}
+
+.token.operator,
+.token.entity,
+.token.url {
+  color: #67cdcc;
+}
+
+.token.none {
+  color: white;
+}
+
+.collapse {
+    /* Style the searchbar in stunning dark mode */
+    background-color: #2d2e2f;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #111;
+    margin-right: 10px;
+    font-size: 0.8em;
+    text-decoration: none;
+}
+
+/* The button within the button-row on top of the code-block */
+.code-container-button {
+  /* Style the searchbar in stunning dark mode */
+  background-color: #2d2e2f;
+  background-color: #242526;
+  border-bottom: 3px ridge #7ec699;
+  border-radius: 5px 5px 0px 0px;
+  color: #7e95a6;
+  padding: 5px;
+  margin-right: 10px;
+  font-size: 0.8em;
+  text-decoration: none;
+}
+
+.type-button {
+  color: #7ec699;
+}
+
+.description {
+  color: #999;
+}
+
+.collapse:hover {
+  border: 2px solid #1a92e8;
+  background-color: #646673;
+}
+
+.vertical-line {
+  margin-left: 1em;
+  margin-right: 1em;
+  border-left: 0.3em solid #f8c555;
+}
+
+/* Desktop */
+@media (min-width: 600px) {
+  .site-content {
+    padding-top: 60px;
+    padding-bottom: 20px;
+    padding-left: 8%;
+    padding-right: 15%;
+  }
+
+  html {
+    font-size: 16px;
+  }
+
+  .indent {
+    padding-left: 2em;
+  }
+}

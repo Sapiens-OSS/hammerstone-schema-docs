@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+  <head class="">
+    <title>Component Test</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="nav">
+      
+      <input type="text" id="searchbar" onkeyup="filter()"  class="searchbar" placeholder="Search..">
+      <p id="counter">
+        10
+      </p>
+      <button class="collapse" onclick="collapseAll()">
+        Collapse
+      </button>
+
+      <div class="nav-button-group">
+        <div class="nav-item">
+          <a href="https://discord.gg/XjV87YN" class="nav-link">Discord</a>
+        </div>
+        <div class="nav-item">
+          <a href="https://github.com/SirLich/bedrock-schema-docs" class="nav-link">GitHub</a>
+        </div>
+      </div>
+    </div>
+    <div class="site-content">
+<div class="component hs_object">
+<div class="title-row">
+<h3 class="title" id="hs_object">
+hs_object</h3><a class="anchor" href="#hs_object">
+#</a></div><span class="button-row">
+<a class="code-container-button" href="https://bedrock.dev/docs/stable/Entities#hs_object">
+bedrock.dev</a></span><div class="code-container">
+<code class="code">
+<div class="indent indent-0  hs_object">
+<div class="token comment spacer">
+# This component allows you to specify basic information about the object.</div><span class="token property">
+"hs_object"</span><span class="token operator">
+:</span><span class="token punctuation open-block">
+{</span><span class="token comment invisible extender">
+...</span><div class="block">
+<div class="indent indent-1 object hs_object.scale">
+<div class="token comment spacer">
+# The scale of the model.</div><div class="token comment">
+# Default: 1</div><span class="token property">
+"scale"</span><span class="token operator">
+:</span><span class="token float">
+float</span></div><div class="indent indent-1 object hs_object.model">
+<div class="token comment spacer">
+# The name of the model that will represent this object.
+- Field: modelName</div><div class="token comment">
+# Required: True</div><span class="token property">
+"model"</span><span class="token operator">
+:</span><span class="token string">
+string</span></div><div class="indent indent-1 object hs_object.random_rotation">
+<div class="token comment spacer">
+# Whether the object will have a random initial rotation.</div><div class="token comment">
+# Default: True</div><span class="token property">
+"random_rotation"</span><span class="token operator">
+:</span><span class="token boolean">
+boolean</span></div><div class="indent indent-1 object hs_object.physics">
+<div class="token comment spacer">
+# Whether the object has physics.
+- Field: hasPhysics</div><div class="token comment">
+# Default: True</div><span class="token property">
+"physics"</span><span class="token operator">
+:</span><span class="token boolean">
+boolean</span></div><div class="indent indent-1 object hs_object.link_to_resource">
+<div class="token comment spacer">
+# Allows you to link to an existing resource, rather than creating a new one. Mutually exclusive with 'create_resource'</div><span class="token property">
+"link_to_resource"</span><span class="token operator">
+:</span><span class="token string">
+string</span></div><div class="indent indent-1 object hs_object.marker_positions">
+<div class="token comment spacer">
+# The position where in-game markers will be positioned. In meters.</div><span class="token property">
+"marker_positions"</span><span class="token operator">
+:</span><span class="token punctuation open-block">
+[</span><span class="token comment invisible extender">
+...</span><div class="block">
+</div><span class="token punctuation close-block">
+]</span></div></div><span class="token punctuation close-block">
+}</span></div></code></div></div><div class="component hs_resource">
+<div class="title-row">
+<h3 class="title" id="hs_resource">
+hs_resource</h3><a class="anchor" href="#hs_resource">
+#</a></div><span class="button-row">
+<a class="code-container-button" href="https://bedrock.dev/docs/stable/Entities#hs_resource">
+bedrock.dev</a></span><div class="code-container">
+<code class="code">
+<div class="indent indent-0  hs_resource">
+<div class="token comment spacer">
+# Defines the relationship that this object has with any potential resources.</div><span class="token property">
+"hs_resource"</span><span class="token operator">
+:</span><span class="token punctuation open-block">
+{</span><span class="token comment invisible extender">
+...</span><div class="block">
+<div class="indent indent-1 object hs_resource.link_to_storage">
+<div class="token comment spacer">
+# The identifier of the storage type for this object (defined in it's own file).</div><span class="token property">
+"link_to_storage"</span><span class="token operator">
+:</span><span class="token string">
+string</span></div></div><span class="token punctuation close-block">
+}</span></div></code></div></div><div class="component hs_plans">
+<div class="title-row">
+<h3 class="title" id="hs_plans">
+hs_plans</h3><a class="anchor" href="#hs_plans">
+#</a></div><span class="button-row">
+<a class="code-container-button" href="https://bedrock.dev/docs/stable/Entities#hs_plans">
+bedrock.dev</a></span><div class="code-container">
+<code class="code">
+<div class="indent indent-0  hs_plans">
+<div class="token comment spacer">
+# Allows you to define a custom 'planHelper' for this object. Can be used to hook your object to a unique plan, or use a vanilla preset.</div><span class="token property">
+"hs_plans"</span><span class="token operator">
+:</span><span class="token punctuation open-block">
+{</span><span class="token comment invisible extender">
+...</span><div class="block">
+<div class="indent indent-1 object hs_plans.available_plans">
+<div class="token comment spacer">
+# The plan-helper config you want to use.
+- See: planHelper.lua</div><div class="token comment">
+# Required: True</div><span class="token property">
+"available_plans"</span><span class="token operator">
+:</span><span class="token string">
+string</span></div></div><span class="token punctuation close-block">
+}</span></div></code></div></div><div class="component hs_tool">
+<div class="title-row">
+<h3 class="title" id="hs_tool">
+hs_tool</h3><a class="anchor" href="#hs_tool">
+#</a></div><span class="button-row">
+<a class="code-container-button" href="https://bedrock.dev/docs/stable/Entities#hs_tool">
+bedrock.dev</a></span><div class="code-container">
+<code class="code">
+<div class="indent indent-0  hs_tool">
+<div class="token comment spacer">
+# Describes the ways in which this item can be used as a tool.</div><span class="token property">
+"hs_tool"</span><span class="token operator">
+:</span><span class="token punctuation open-block">
+{</span><span class="token comment invisible extender">
+...</span><div class="block">
+<div class="indent indent-1 object hs_tool.tool_usage">
+<div class="token comment spacer">
+# List of tool configurations. You can add multiple configs if your tool is multi-purpose.
+- Field: toolUsages</div><span class="token property">
+"tool_usage"</span><span class="token operator">
+:</span><span class="token punctuation open-block">
+[</span><span class="token comment invisible extender">
+...</span><div class="block">
+<div class="indent indent-2 array hs_tool.tool_usage">
+<div class="token comment spacer">
+# A single configuration, defining the stats for a single tool-type.</div><span class="token object">
+object</span><span class="token punctuation open-block">
+{</span><span class="token comment invisible extender">
+...</span><div class="block">
+<div class="indent indent-3 object hs_tool.tool_usage.tool_type">
+<div class="token comment spacer">
+# The ID of the tool type.
+- See: tool.lua</div><div class="token comment">
+# Required: True</div><span class="token property">
+"tool_type"</span><span class="token operator">
+:</span><span class="token string">
+string</span></div><div class="indent indent-3 object hs_tool.tool_usage.damage">
+<div class="token comment spacer">
+# NODOCS</div><div class="token comment">
+# Default: 1</div><span class="token property">
+"damage"</span><span class="token operator">
+:</span><span class="token float">
+float</span></div><div class="indent indent-3 object hs_tool.tool_usage.durability">
+<div class="token comment spacer">
+# NODOCS</div><div class="token comment">
+# Default: 1</div><span class="token property">
+"durability"</span><span class="token operator">
+:</span><span class="token float">
+float</span></div><div class="indent indent-3 object hs_tool.tool_usage.speed">
+<div class="token comment spacer">
+# NODOCS</div><div class="token comment">
+# Default: 1</div><span class="token property">
+"speed"</span><span class="token operator">
+:</span><span class="token float">
+float</span></div></div><span class="token punctuation close-block">
+}</span></div></div><span class="token punctuation close-block">
+]</span></div></div><span class="token punctuation close-block">
+}</span></div></code></div></div><div class="component hs_evolving_object">
+<div class="title-row">
+<h3 class="title" id="hs_evolving_object">
+hs_evolving_object</h3><a class="anchor" href="#hs_evolving_object">
+#</a></div><span class="button-row">
+<a class="code-container-button" href="https://bedrock.dev/docs/stable/Entities#hs_evolving_object">
+bedrock.dev</a></span><div class="code-container">
+<code class="code">
+<div class="indent indent-0  hs_evolving_object">
+<div class="token comment spacer">
+# This component allows specifying how your object will rot/dry/despawn.</div><span class="token property">
+"hs_evolving_object"</span><span class="token operator">
+:</span><span class="token punctuation open-block">
+{</span><span class="token comment invisible extender">
+...</span><div class="block">
+<div class="indent indent-1 object hs_evolving_object.time_years">
+<div class="token comment spacer">
+# The time in years before this object will transform. Mutually exclusive with 'time_days'</div><span class="token property">
+"time_years"</span><span class="token operator">
+:</span><span class="token string">
+string</span></div><div class="indent indent-1 object hs_evolving_object.time_days">
+<div class="token comment spacer">
+# The time in days before this object will transform. Mutually exclusive with 'time_years'</div><span class="token property">
+"time_days"</span><span class="token operator">
+:</span><span class="token string">
+string</span></div><div class="indent indent-1 object hs_evolving_object.transform_to">
+<div class="token comment spacer">
+# Unknown Description</div><span class="token property">
+"transform_to"</span><span class="token operator">
+:</span><span class="token punctuation open-block">
+[</span><span class="token comment invisible extender">
+...</span><div class="block">
+<div class="indent indent-2 array hs_evolving_object.transform_to">
+<div class="token comment spacer">
+# Identifiers of the item you want to transform to. Leave blank to despawn rotten items.</div><span class="token string">
+string</span></div></div><span class="token punctuation close-block">
+]</span></div><div class="indent indent-1 object hs_evolving_object.category">
+<div class="token comment spacer">
+# The category of transformation that is occurring.</div><div class="token comment">
+# Required: True</div><span class="token property">
+"category"</span><span class="token operator">
+:</span><span class="token string">
+string</span></div></div><span class="token punctuation close-block">
+}</span></div></code></div></div><div class="component hs_food">
+<div class="title-row">
+<h3 class="title" id="hs_food">
+hs_food</h3><a class="anchor" href="#hs_food">
+#</a></div><span class="button-row">
+<a class="code-container-button" href="https://bedrock.dev/docs/stable/Entities#hs_food">
+bedrock.dev</a></span><div class="code-container">
+<code class="code">
+<div class="indent indent-0  hs_food">
+<div class="token comment spacer">
+# Defines that the object is edible, and specifies it's properties.</div><span class="token property">
+"hs_food"</span><span class="token operator">
+:</span><span class="token punctuation open-block">
+{</span><span class="token comment invisible extender">
+...</span><div class="block">
+<div class="indent indent-1 object hs_food.portions">
+<div class="token comment spacer">
+# The number of times this food item can be eaten before it is fully consumed.</div><div class="token comment">
+# Default: 1</div><span class="token property">
+"portions"</span><span class="token operator">
+:</span><span class="token integer">
+integer</span></div><div class="indent indent-1 object hs_food.value">
+<div class="token comment spacer">
+# The saturation value gained each time this food is eaten.</div><div class="token comment">
+# Default: 0.5</div><span class="token property">
+"value"</span><span class="token operator">
+:</span><span class="token float">
+float</span></div><div class="indent indent-1 object hs_food.food_poison_chance">
+<div class="token comment spacer">
+# The chance your Sapien will become sick consuming this food. 0=0%, 1=100%</div><span class="token property">
+"food_poison_chance"</span><span class="token operator">
+:</span><span class="token float">
+float</span></div><div class="indent indent-1 object hs_food.items_when_eaten">
+<div class="token comment spacer">
+# The list of items to transform to, when this object is eaten.</div><span class="token property">
+"items_when_eaten"</span><span class="token operator">
+:</span><span class="token punctuation open-block">
+[</span><span class="token comment invisible extender">
+...</span><div class="block">
+<div class="indent indent-2 array hs_food.items_when_eaten">
+<div class="token comment spacer">
+# Object identifier</div><span class="token string">
+string</span></div></div><span class="token punctuation close-block">
+]</span></div></div><span class="token punctuation close-block">
+}</span></div></code></div></div><div class="component hs_harvestable">
+<div class="title-row">
+<h3 class="title" id="hs_harvestable">
+hs_harvestable</h3><a class="anchor" href="#hs_harvestable">
+#</a></div><span class="button-row">
+<a class="code-container-button" href="https://bedrock.dev/docs/stable/Entities#hs_harvestable">
+bedrock.dev</a></span><div class="code-container">
+<code class="code">
+<div class="indent indent-0  hs_harvestable">
+<div class="token comment spacer">
+# Controls whether the object can be harvested for resources.
+- See: harvestable.lua
+- Tip: Set 'hs_plans' to something that supports harvesting.</div><span class="token property">
+"hs_harvestable"</span><span class="token operator">
+:</span><span class="token punctuation open-block">
+{</span><span class="token comment invisible extender">
+...</span><div class="block">
+<div class="indent indent-1 object hs_harvestable.resources_to_harvest">
+<div class="token comment spacer">
+# The list of resources to drop when this object is harvested. Duplicates are allowed.</div><div class="token comment">
+# Required: True</div><span class="token property">
+"resources_to_harvest"</span><span class="token operator">
+:</span><span class="token punctuation open-block">
+[</span><span class="token comment invisible extender">
+...</span><div class="block">
+<div class="indent indent-2 array hs_harvestable.resources_to_harvest">
+<div class="token comment spacer">
+# The 'gameObject' identifier of a single item to drop.
+- See: gameObject.lua</div><span class="token string">
+string</span></div></div><span class="token punctuation close-block">
+]</span></div><div class="indent indent-1 object hs_harvestable.finish_harvest_index">
+<div class="token comment spacer">
+# The index [in resources_to_harvest] upon which the object will be removed, and replaced with the remaining resources.</div><div class="token comment">
+# Required: True</div><span class="token property">
+"finish_harvest_index"</span><span class="token operator">
+:</span><span class="token integer">
+integer</span></div></div><span class="token punctuation close-block">
+}</span></div></code></div></div><div class="component hs_buildable">
+<div class="title-row">
+<h3 class="title" id="hs_buildable">
+hs_buildable</h3><a class="anchor" href="#hs_buildable">
+#</a></div><span class="button-row">
+<a class="code-container-button" href="https://bedrock.dev/docs/stable/Entities#hs_buildable">
+bedrock.dev</a></span><div class="code-container">
+<code class="code">
+<div class="indent indent-0  hs_buildable">
+<div class="token comment spacer">
+# Marks this as a 'buildable object'. Incompatible with 'hs_resource'.</div><span class="token property">
+"hs_buildable"</span><span class="token operator">
+:</span><span class="token punctuation open-block">
+{</span><span class="token comment invisible extender">
+...</span><div class="block">
+<div class="indent indent-1 object hs_buildable.seat_type">
+<div class="token comment spacer">
+# Configures whether (and how) the sapien can sit on this object.
+
+- See seat.lua
+
+- Custom seats can be created using the shared config</div><span class="token property">
+"seat_type"</span><span class="token operator">
+:</span><span class="token string">
+string</span></div><div class="indent indent-1 object hs_buildable.skill">
+<div class="token comment spacer">
+# The skill required to complete this building.
+- See: skill.lua</div><span class="token property">
+"skill"</span><span class="token operator">
+:</span><span class="token string">
+string</span></div><div class="indent indent-1 object hs_buildable.classification">
+<div class="token comment spacer">
+# The classification for this craftable.
+- See: craftable.lua</div><div class="token comment">
+# Default: build</div><span class="token property">
+"classification"</span><span class="token operator">
+:</span><span class="token string">
+string</span></div><div class="indent indent-1 object hs_buildable.build_completion_plan">
+<div class="token comment spacer">
+# The plan to queue, when the building is finished.
+- See: plan.lua</div><span class="token property">
+"build_completion_plan"</span><span class="token operator">
+:</span><span class="token string">
+string</span></div><div class="indent indent-1 object hs_buildable.resources">
+<div class="token comment spacer">
+# Unknown Description</div><span class="token property">
+"resources"</span><span class="token operator">
+:</span><span class="token punctuation open-block">
+[</span><span class="token comment invisible extender">
+...</span><div class="block">
+</div><span class="token punctuation close-block">
+]</span></div><div class="indent indent-1 object hs_buildable.model_placeholder">
+<div class="token comment spacer">
+# Unknown Description</div><span class="token property">
+"model_placeholder"</span><span class="token operator">
+:</span><span class="token punctuation open-block">
+[</span><span class="token comment invisible extender">
+...</span><div class="block">
+</div><span class="token punctuation close-block">
+]</span></div></div><span class="token punctuation close-block">
+}</span></div></code></div></div></div>
+    <script class="" src="index.js"></script>
+  </body>
+</html>
